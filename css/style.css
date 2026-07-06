@@ -1,1 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+body { color: #333; background: #fafafa; }
+a { text-decoration: none; color: #111; }
 
+/* Menu định vị cố định */
+header {
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.logo { font-size: 24px; font-weight: bold; letter-spacing: 2px; }
+.logo span { color: #ff4757; }
+.nav-links { list-style: none; display: flex; }
+.nav-links li { margin-left: 20px; }
+.nav-links a { font-weight: 600; font-size: 14px; text-transform: uppercase; transition: 0.3s; }
+.nav-links a:hover, .nav-links a.active { color: #ff4757; }
+
+/* Phân vùng rõ ràng */
+.container { padding: 40px 8%; }
+.category-zone { margin-bottom: 50px; padding: 20px; background: #fff; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+.bg-light { background: #f1f2f6; }
+.category-zone h2 { margin-bottom: 20px; border-left: 4px solid #ff4757; padding-left: 10px; }
+
+/* Bố cục Grid liên kết nội dung liên quan */
+.grid-layout { display: grid; grid-template-columns: 2fr 1fr; gap: 30px; }
+.card img { width: 100%; border-radius: 6px; }
+.card h3 { margin: 15px 0 10px; }
+.read-more { display: inline-block; margin-top: 15px; color: #ff4757; font-weight: bold; }
+
+.related-links { list-style: square; padding-left: 20px; }
+.related-links li { margin-bottom: 10px; }
+.related-links a:hover { color: #ff4757; text-decoration: underline; }
+
+/* Khu vực Bình luận */
+.comment-section { background: #f9f9f9; padding: 15px; border-radius: 6px; }
+#comment-list { max-height: 150px; overflow-y: auto; margin-bottom: 15px; }
+.comment-item { background: #fff; padding: 8px 12px; margin-bottom: 8px; border-radius: 4px; border-left: 3px solid #2ed573; font-size: 14px; }
+#comment-form input, #comment-form textarea { width: 100%; padding: 8px; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 4px; }
+#comment-form button { background: #111; color: #fff; border: none; padding: 8px 15px; cursor: pointer; border-radius: 4px; }
+#comment-form button:hover { background: #ff4757; }
+
+/* Footer & Sitemap */
+footer { background: #111; color: #fff; padding: 40px 8% 20px; margin-top: 50px; }
+.footer-container { display: flex; justify-content: space-between; flex-wrap: wrap; }
+.sitemap ul { list-style: none; margin-top: 10px; }
+.sitemap ul li { margin-bottom: 5px; }
+.sitemap ul li a { color: #ccc; font-size: 14px; }
+.sitemap ul li a:hover { color: #ff4757; }
+.sitemap ul ul { padding-left: 15px; }
+.copyright { text-align: center; margin-top: 30px; border-top: 1px solid #333; padding-top: 20px; font-size: 12px; color: #aaa; }
