@@ -1,1 +1,141 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FashionZone - Kênh Thời Trang & Làm Đẹp</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Nhúng thư viện jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
 
+    <!-- 1. THANH MENU ĐIỀU HƯỚNG -->
+    <header>
+        <div class="logo">FASHION<span>ZONE</span></div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Trang Chủ</a></li>
+                <li><a href="news.html">Tin Tức & Sự Kiện</a></li>
+                <li><a href="trends.html">Xu Hướng</a></li>
+                <li><a href="beauty.html">Làm Đẹp</a></li>
+                <li><a href="contact.html">Liên Hệ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- BANNER SLIDER (Dùng JQuery tạo hiệu ứng) -->
+    <section class="hero-banner">
+        <div class="slide active">
+            <h1>XU HƯỚNG THỜI TRANG 2026</h1>
+            <p>Khám phá những bộ sưu tập bùng nổ sàn diễn năm nay.</p>
+        </div>
+    </section>
+
+    <!-- 2. PHÂN VÙNG CÁC CHỦ ĐỀ CHÍNH -->
+    <main class="container">
+        
+        <!-- Vùng 1: Tin Tức & Sự Kiện -->
+        <section class="category-zone">
+            <h2><a href="news.html">Tin Tức & Sự Kiện Nổi Bật ➔</a></h2>
+            <div class="grid-layout">
+                <div class="card">
+                    <img src="https://via.placeholder.com/400x250" alt="Fashion Week">
+                    <h3>Paris Fashion Week: Sự lên ngôi của trường phái tối giản</h3>
+                    <p>Điểm lại những khoảnh khắc ấn tượng nhất tại tuần lễ thời trang Paris...</p>
+                    <a href="news.html" class="read-more">Xem chi tiết</a>
+                </div>
+                <div class="card">
+                    <h3>Liên quan:</h3>
+                    <ul class="related-links">
+                        <li><a href="news.html#local-brand">Local Brand Việt Nam vươn tầm quốc tế</a></li>
+                        <li><a href="trends.html#retro">Phong cách Retro đổ bộ sàn diễn hè này</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Vùng 2: Xu Hướng Thời Trang -->
+        <section class="category-zone bg-light">
+            <h2><a href="trends.html">Xu Hướng Thời Trang ➔</a></h2>
+            <div class="grid-layout">
+                <div class="card">
+                    <img src="https://via.placeholder.com/400x250" alt="Trends">
+                    <h3>Màu Sắc Chủ Đạo Của Mùa Thu Năm Nay</h3>
+                    <p>Sắc nâu đất và xanh rêu đang chiếm trọn spotlight trong các tủ đồ streetstyle.</p>
+                    <a href="trends.html" class="read-more">Xem chi tiết</a>
+                </div>
+                <div class="card">
+                    <h3>Liên quan:</h3>
+                    <ul class="related-links">
+                        <li><a href="beauty.html#makeup-tone">Tone makeup phù hợp với trang phục Thu Đông</a></li>
+                        <li><a href="trends.html#accessories">Phụ kiện ánh kim: Điểm nhấn không thể thiếu</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Vùng 3: Làm Đẹp (Có khu vực demo Comment) -->
+        <section class="category-zone">
+            <h2><a href="beauty.html">Bí Quyết Làm Đẹp ➔</a></h2>
+            <div class="grid-layout">
+                <div class="card">
+                    <img src="https://via.placeholder.com/400x250" alt="Beauty">
+                    <h3>Chăm sóc da "Glass Skin" chuẩn Hàn chỉ với 4 bước</h3>
+                    <p>Sở hữu làn da căng bóng, mịn màng bất chấp thời tiết hanh khô.</p>
+                    <a href="beauty.html" class="read-more">Xem chi tiết</a>
+                </div>
+                
+                <!-- KHU VỰC BÀI TRÌNH BÀY & COMMENT PHẢN HỒI -->
+                <div class="card comment-section">
+                    <h3>Phản hồi từ bạn đọc</h3>
+                    <div id="comment-list">
+                        <div class="comment-item">
+                            <strong>Minh Tú:</strong> Bài viết rất bổ ích, mình đã thử và da cải thiện rõ rệt!
+                        </div>
+                    </div>
+                    
+                    <!-- Form thêm comment nhanh bằng jQuery -->
+                    <form id="comment-form">
+                        <input type="text" id="comment-name" placeholder="Tên của bạn..." required>
+                        <textarea id="comment-text" placeholder="Ý kiến của bạn về bài viết..." required></textarea>
+                        <button type="submit">Gửi phản hồi</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 3. FOOTER & SITE MAP -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-info">
+                <h3>FASHION ZONE</h3>
+                <p>Cập nhật xu hướng thời trang và phong cách sống nhanh nhất.</p>
+            </div>
+            <!-- SITE MAP ĐẠT CHUẨN -->
+            <div class="sitemap">
+                <h3>Sơ đồ trang (Site Map)</h3>
+                <ul>
+                    <li><a href="index.html">Trang Chủ</a></li>
+                    <li><a href="news.html">Tin Tức & Sự Kiện</a>
+                        <ul>
+                            <li><a href="news.html#world">Tin thế giới</a></li>
+                            <li><a href="news.html#domestic">Tin trong nước</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="trends.html">Xu Hướng Thời Trang</a></li>
+                    <li><a href="beauty.html">Góc Làm Đẹp</a></li>
+                    <li><a href="contact.html">Liên Hệ & Góp Ý</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2026 FashionZone. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
